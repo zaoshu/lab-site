@@ -1,4 +1,5 @@
 /* 2016.07.30 created by paincompiler@zaoshu.io*/
+
 h1,
 h2,
 h3,
@@ -59,7 +60,7 @@ h1 {
     width: 320px;
     width: 10rem;
     height: 320px;
-    height: 10rem; 
+    height: 10rem;
     transition: all 0.6s ease;
     transform-style: preserve-3d;
 }
@@ -100,4 +101,82 @@ h1 {
 
 .back {
     transform: rotateY(180deg);
+}
+
+@media (max-device-width: 772px) {
+    html {
+        background: red;
+    }
+    .front,
+    .back {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: inherit;
+        -moz-backface-visibility: inherit;
+        -ms-backface-visibility: inherit;
+        -o-backface-visibility: inherit;
+        backface-visibility: inherit;
+    }
+    .front {
+        font-size: 64px;
+        font-size: 2rem;
+    }
+    .back {
+        transform: rotateY(0deg);
+        font-size: 32px;
+        font-size: 1rem;
+    }
+    @-webkit-keyframes bounce {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-5px);
+        }
+    }
+    @-moz-keyframes bounce {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-5px);
+        }
+    }
+    @-ms-keyframes bounce {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-5px);
+        }
+    }
+    @-o-keyframes bounce {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-5px);
+        }
+    }
+    @keyframes bounce {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-5px);
+        }
+    }
+    .card {
+        -webkit-animation: bounce 0.5s infinite;
+        -moz-animation: bounce 0.5s infinite;
+        -ms-animation: bounce 0.5s infinite;
+        -o-animation: bounce 0.5s infinite;
+        animation: bounce 0.5s infinite;
+    }
 }
